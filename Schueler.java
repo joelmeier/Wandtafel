@@ -11,7 +11,7 @@ import java.util.Random;
 public class Schueler implements SchuelerIterator{
     private List <String> schueler=new ArrayList<>();
     private Random random = new Random();
-    private int currentPos = random.nextInt(16)+1;
+    private int currentPos = random.nextInt(15);
     
     public void fillList(){
         schueler.add("Elena Algaria");
@@ -34,7 +34,7 @@ public class Schueler implements SchuelerIterator{
     }
     @Override
     public boolean hasNext() {
-    if(currentPos + 1 < schueler.size()){
+    if(currentPos < schueler.size()){
         return true;
     }    
     return false;
